@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Enviar orçamento</h2>
+    <form class="well col-sm-10 col-md-11" action="/produto_email" method="post">
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <label>Nome</label>
+                <input class="form-control" type="text" placeholder="Nome" name="nome" value="<%= dadosForm.nome %>">
+                <label>Telefone</label>
+                <input type="text" class="form-control" placeholder="Telefone" name="telefone" value="<%=dadosForm.telefone%>">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Email" name="email" value="<%=dadosForm.email%>">
+            </div>
+            
+            <input type="hidden" class="span4" name="produtoid" value="<%= PP.id %>">
+            <input type="hidden" class="span4" name="produtoUrl_imagem" value="<%= PP.url_imagem %>">
+            <input type="hidden" class="span4" name="produtoNome" value="<%= PP.nome %>">
+            <input type="hidden" class="span4" name="produtoDescricao" value="<%= PP.descricao %>">
+            <input type="hidden" class="span4" name="produtoCategoria" value="<%= PP.categoria %>">
+            
+            <div class="col-sm-8 col-md-7">
+                <div class="form-group">
+                    <label>Mensagem</label> 
+                    <textarea class="col-sm-3 col-md-3 form-control" id="message" placeholder="Mensagem" rows="10" name="mensagem" value="<%=dadosForm.mensagem%>"></textarea>
+                    <button class="btn btn-primary pull-right" type="submit">Send</button>
+                </div>
+            </div>            
+        </div>
+    </form>
+</div>

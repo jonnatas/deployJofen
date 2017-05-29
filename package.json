@@ -1,0 +1,31 @@
+{
+    "name": "jofen",
+    "version": "1.0.0",
+    "description": "Consultoria na automação industrial",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jonnatas/nodeJofen.git"
+    },
+    "author": "Jonnatas Lennon",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jonnatas/nodeJofen/issues"
+    },
+    "homepage": "https://github.com/jonnatas/nodeJofen#readme",
+    "dependencies": {
+        "body-parser": "^1.17.1",
+        "bootstrap": "^3.3.7",
+        "connect-multiparty": "^2.0.0",
+        "consign": "^0.1.4",
+        "ejs": "^2.5.6",
+        "express": "^4.15.2",
+        "express-validator": "^3.2.0",
+        "mongodb": "^2.2.26",
+        "nodemailer": "^4.0.1"
+    }
+}

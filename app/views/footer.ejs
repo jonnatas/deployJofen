@@ -1,0 +1,78 @@
+<div class="footer-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="color_blue">Fale Conosco</h4>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h6 class="color_blue">Telefones:</h6>
+                        <p class="color_white"> (11) 3876-0070</p>
+                        <p class="color_white"> (11) 3814-0070<p >
+                     </div>
+                     <div class="col-md-4">
+                        <h6 class="color_blue">Email:</h6>
+                        <p class="color_white"> comercial2@jofen.com.br</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="color_blue">Endereço:</h6>
+                        <p class="color_white"> Av. Corifeu de Azevedo Marques, 1481 - Butantã, São Paulo - SP, 05581-001, Brasil</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-6">
+                <h4 class="color_blue">Jofen</h4>
+                    <p class="color_white">Desde de 1999, a Jofen atua na área de Consultoria em automação industrial, atendendo as necessidades de seus clientes e oferecendo produtos e serviços de alta qualidade, aliado a capacidade de assessorar e especiﬁcar os produtos ideiais
+                        nos momentos certos. Considerada por seus clientes e fornecedores como uma das maiores e melhores distribuidoras dos produtos das marcas Coel, Metaltex, SSR, LG, Sense a Jofen está sempre a procura em aprimorar ainda mais esta
+                        condição buscando a satisfação de todos aqueles que fazem parte do crescimento desta empresa.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span1">
+                <img src="/img/featured/logos/logo_coel.png" class="img-responsive" alt="Responsive image">
+            </div>
+            <div class="span1">
+                <img src="/img/featured/logos/logo_ssr.jpg" class="img-responsive" alt="Responsive image">
+            </div>
+            <div class="span1">
+                <img src="/img/featured/logos/logo_autonics.png" class="img-responsive" alt="Responsive image">
+            </div>
+            <div class="span1">
+                <img src="/img/featured/logos/logo_clip.jpg" class="img-responsive" alt="Responsive image">
+            </div>
+            <div class="span1">
+                <img src="/img/featured/logos/logo_metaltex.png"class="img-responsive" alt="Responsive image">
+            </div>
+            <div class="span1">
+                <img src="/img/featured/logos/Logo_sense.png"class="img-responsive" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /container -->
+
+<script>
+    $('.carousel').carousel({
+        interval: 3000
+    });
+
+    $(document).ready(function() {
+        $('.dropdown-submenu a.test').on("click", function(e) {
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });
+
+    (function($){
+			$(document).ready(function(){
+				$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+					event.preventDefault(); 
+					event.stopPropagation(); 
+					$(this).parent().siblings().removeClass('open');
+					$(this).parent().toggleClass('open');
+				});
+			});
+		})(jQuery);
+</script>

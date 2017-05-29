@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Fale Conosco</h2>
+    <form class="well col-sm-10 col-md-11" action="/getmail" method="post">
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <label>Nome</label>
+                <input class="form-control" type="text" placeholder="Nome" name="nome" value="<%= dadosForm.nome %>">
+                <label>Telefone</label>
+                <input type="text" class="form-control" placeholder="Telefone" name="telefone" value="<%=dadosForm.telefone%>">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Email" name="email" value="<%=dadosForm.email%>">
+                <label>Assunto</label>
+                <input type="text" class="form-control" placeholder="Assunto" name="assunto" value="<%=dadosForm.assunto%>">
+            </div>
+            
+            <div class="col-sm-8 col-md-7">
+                <div class="form-group">
+                    <label>Mensagem</label> 
+                    <textarea class="col-sm-3 col-md-3 form-control" id="message" placeholder="Mensagem" rows="10" name="mensagem" value="<%=dadosForm.mensagem%>"></textarea>  
+                </div>
+            </div>            
+        </div>
+            <br>
+    <button type="submit" class="btn">Enviar</button>
+    </form>
+</div>

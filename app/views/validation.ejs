@@ -1,0 +1,19 @@
+<% if(validation.length > 0 ){ %>
+    <div class="alert alert-danger">
+        <strong>Atenção!</strong>
+        <ul>
+            <% for(var i = 0; i<validation.length; i++) { %>
+            <li><%= validation[i].msg %></li>
+            <%} %>
+        </ul>
+    </div>
+<% } %>
+
+<% if(sucesso.mail){ %>
+    <div class="alert alert-success">
+        <strong>Atenção</strong>
+        <ul>
+            <li><%= sucesso.mail %></li>
+        </ul>
+    </div>
+<% } %>

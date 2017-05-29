@@ -1,0 +1,35 @@
+<%- include('header') %>
+
+<body>
+    <%- include('navbar') %>
+
+           <div class="container">
+        <hr>
+        <div class="corpo">
+            
+            <div class="row">
+                <div class="span4">
+                    <h3><%=produto[0].nome%><small> By <a href="#">Srawat56</a></small></h3>
+                    <a href="/produto/<%=produto[0]._id%>"><img src="img/produtos/TLZ10-H-VERMELHO-01-1500x1500.jpg" alt=""></a>
+                </div>
+                <div class="span4">
+                    <h3>Nature's Valley<small> By <a href="#">Paul venter</a></small></h3>
+                    <a rel="lightbox" href="img/produtos/TLZ10-H-VERMELHO-02-1500x1500.jpg"><img src="img/produtos/TLZ10-H-VERMELHO-02-1500x1500.jpg" alt=""></a>
+                </div>
+                <div class="span4">
+                    <h3>Deep Sky<small> By <a href="#">Srawat56</a></small></h3>
+                    <a rel="lightbox" href="img/produtos/TLZ10-H-VERMELHO-01-1500x1500.jpg"><img src="img/produtos/TLZ10-H-VERMELHO-01-1500x1500.jpg" alt=""></a>
+                </div>
+            </div>
+            <!--Start second row of columns-->
+            <hr>
+            
+        </div>
+    </div>
+        
+
+
+    <%- include('footer') %>
+</body>
+
+</html>

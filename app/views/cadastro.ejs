@@ -1,0 +1,56 @@
+<%- include('header') %>
+
+    <body>
+        <%- include('navbar') %>
+
+            <div class="container">
+                <hr>
+                <div class="corpo">
+                    <div class="container">
+
+                        <% if(validation.length > 0 ){ %>
+                            <div class="alert alert-danger">
+                                <strong>"Atenção!</strong>
+                                <ul>
+                                    <% for(var i = 0; i<validation.length; i++) { %>
+                                        <li>
+                                            <%=validation[i].msg %>
+                                        </li>
+                                        <%} %>
+                                </ul>
+                            </div>
+                            <% } %>
+                            
+                            <% console.log(imagem_status) %>
+                            <% if(imagem_status.sucesso){ %>
+                            <div class="alert alert-info">
+                                <strong>Atenção</strong>
+                                <ul>
+                                    <li>
+                                        <%= imagem_status.sucesso %>
+                                    </li>
+                                </ul>
+                            </div>
+                            <% } %>
+
+                                <form class="form-cadastro" action="/produto" method="post" enctype='multipart/form-data'>
+                                    <input type="text" value="<%= dadosForm.nome %>" class="span4" name="nome" placeholder="Nome">
+                                    <br>
+                                    <input type="text" value="<%= dadosForm.descricao %>" class="span4" name="descricao" placeholder="Descrição">
+                                    <br>
+                                    <input type="text" value="<%= dadosForm.categoria %>" class="span4" name="categoria" placeholder="Categoria">
+                                    <br>
+                                    <input type="file" class="span4" name="imagem" id="imagem">
+                                    <br>
+                                    <button type="submit" class="btn">Enviar</button>
+                                </form>
+                                <hr>
+                                </hr>
+                                </form>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <%- include('footer') %>
+    </body>
+    </html>
