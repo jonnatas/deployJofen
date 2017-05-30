@@ -2,7 +2,6 @@ var express = require('express'),
     multiparty = require('connect-multiparty'),
     consign = require('consign'),
     bodyParser = require('body-parser'),
-    fs = require('fs'),
     expressValidator = require('express-validator');
 
 var app = express();
