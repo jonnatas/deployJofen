@@ -25,19 +25,19 @@ module.exports = function(application, req, res) {
         application.app.controllers.produtos.cadastrar(application, req, res);
     });
 
+    /*
+        //PUT By ID update
+        application.put('/produto/:id', function(req, res) {
+            application.app.controllers.produtos.updateProduto(application, req, res);
+        });
 
-    //PUT By ID update
-    application.put('/produto/:id', function(req, res) {
-        application.app.controllers.produtos.updateProduto(application, req, res);
-    });
+        application.get('/produtos', function(req, res) {
+            application.app.controllers.produtos.allProdutos(application, req, res);
+        });
 
-    application.get('/produtos', function(req, res) {
-        application.app.controllers.produtos.allProdutos(application, req, res);
-    });
-
-    //DELETE By ID(remover)
-    application.delete('/produto/:id', function(req, res) {
-        application.app.controllers.produtos.deleteProduto(application, req, res);
-    });
-
+        //DELETE By ID(remover)
+        application.delete('/produto/:id', function(req, res) {
+            application.app.controllers.produtos.deleteProduto(application, req, res);
+        });
+    */
 }
