@@ -5,6 +5,7 @@ var express = require('express'),
 
 var consign = require('consign');
 var app = express();
+var http = require('http').Server(app);
 
 // views is directory for all template files
 app.set('view engine', 'ejs');
@@ -28,7 +29,7 @@ consign()
 //app.set('port', (process.env.PORT || 5000));
 var port = process.env.PORT || 8000;
 
-server.listen(port, function() {
+http.listen(port, function() {
     console.log("App is running on port " + port);
 });
 
