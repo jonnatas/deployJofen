@@ -8,10 +8,10 @@ var app = express();
 
 // views is directory for all template files
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/app/views');
+app.set('views', './app/views');
 
 
-app.use(express.static(__dirname + '/app/public'));
+app.use(express.static('./app/public'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
