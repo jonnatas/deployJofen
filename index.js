@@ -1,9 +1,9 @@
 var express = require('express'),
     multiparty = require('connect-multiparty'),
-    consign = require('consign'),
     bodyParser = require('body-parser'),
     expressValidator = require('express-validator');
 
+var consign = require('consign');
 var app = express();
 
 // views is directory for all template files
