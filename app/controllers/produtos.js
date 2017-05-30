@@ -1,4 +1,4 @@
-var fs = require("fs");
+var fs = require('fs');
 var nodemailer = require('nodemailer');
 
 module.exports.allProdutos = function(application, req, res) {
