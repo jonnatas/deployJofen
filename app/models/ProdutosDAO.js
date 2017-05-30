@@ -2,9 +2,9 @@ var objectId = require('mongodb').ObjectID;
 var mongodb = require('mongodb'),
     MongoClient = require('mongodb').MongoClient;
 
-var mongoose = require('mongoose');
+var uri = 'mongodb://jonnatasLennon:12092190qp@ds155201.mlab.com:55201/jofen';
 
-var uri = 'mongodb://localhost:27017/jofen';
+//MongoDB server version: 3.2.13
 
 function ProdutosDAO() {
 

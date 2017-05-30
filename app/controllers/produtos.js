@@ -2,13 +2,11 @@ var fs = require("fs");
 var nodemailer = require('nodemailer');
 
 module.exports.allProdutos = function(application, req, res) {
-
     var ProdutosDAO = new application.app.models.ProdutosDAO();
     ProdutosDAO.getAllProdutos(req, res)
 }
 
 module.exports.produto = function(application, req, res) {
-
     var ProdutosDAO = new application.app.models.ProdutosDAO();
     ProdutosDAO.getProduto(req, res);
 }
@@ -30,8 +28,6 @@ module.exports.updateProduto = function(application, req, res) {
         return;
     }
 
-
-
     var ProdutosDAO = new application.app.models.ProdutosDAO();
     ProdutosDAO.update(req, res);
 }
@@ -41,7 +37,6 @@ module.exports.add = function(application, req, res) {
 }
 
 module.exports.deleteProduto = function(application, req, res) {
-
     var ProdutosDAO = new application.app.models.ProdutosDAO();
     ProdutosDAO.delete(req, res);
 }
@@ -104,7 +99,6 @@ module.exports.cadastrar = function(application, req, res) {
             return;
         }
     });
-
 
     var ProdutosDAO = new application.app.models.ProdutosDAO();
     ProdutosDAO.inserirProduto(req, res, dadosForm);
