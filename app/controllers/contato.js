@@ -57,7 +57,7 @@ module.exports.mail = function(application, req, res) {
 
     var mailOptions = {
         from: 'jonatas lenon <jonatastestelennon@gmail.com>',
-        to: 'jonatastestelennon@gmail.com',
+        to: 'jonatastestelennon@gmail.com, comercial2@jofen.com.br',
         subject: 'Contato site jofen: ' + req.body.assunto,
         html: '<H1> Email: ' + req.body.email + '</H1>Nome: ' + '<h2>' + req.body.nome + ' </H2> <h3> Telefone: ' + req.body.telefone + '</h3><p>Mensagem: ' + req.body.mensagem + '</p>'
     };
