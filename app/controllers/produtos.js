@@ -161,7 +161,7 @@ module.exports.send_email = function(application, req, res) {
 
     var mailOptions = {
         from: 'Jonnatas Lennon <jonatas_lenon@hotmail.com>',
-        to: 'comercial2@jofen.com.br',
+        to: 'jonatas_lenon@hotmail.com',
         subject: 'Contato site jofen: ' + PP.nome,
         html: '<H1> Email: ' + req.body.email + '</H1>Nome: ' + '<h2>' + req.body.nome + ' </H2> <h3> Telefone: ' + req.body.telefone + '</h3><p>Mensagem: ' + req.body.mensagem + '</p>'
     };
