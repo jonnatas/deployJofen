@@ -65,6 +65,7 @@ module.exports.mail = function(application, req, res) {
     var sendMail = transporter.sendMail(mailOptions, function(error,
         info) {
         if (error) {
+            console.log(error)
             res.render('contato', {
                 validation: {},
                 dadosForm: {},
