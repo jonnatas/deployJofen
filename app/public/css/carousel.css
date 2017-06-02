@@ -218,8 +218,8 @@ body {
 /* Spam*/
 
 [class*="span"] {
-    float: left;
-    margin-left: 20px;
+    float: left !important;
+    margin-left: 20px !important;
 }
 
 .span12 {
@@ -267,7 +267,7 @@ body {
 }
 
 .span1 {
-    width: 40px;
+    width: 70px;
 }
 
 .row-fluid [class*="span"] {
