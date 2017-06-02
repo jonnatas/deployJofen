@@ -15,7 +15,7 @@ a:focus {
 }
 
 body {
-    padding-top: 90px;
+    padding-top: 70px;
     font-family: 'Roboto', sans-serif, 'Helvetica Neue';
     margin: 0;
     font-size: 13px;
@@ -138,22 +138,22 @@ body {
 }
 
 .mainmenu .collapse ul ul ul>li:hover>a {
-    background: #CBEAF0;
+    background: #00b8d4;
 }
 
 .mainmenu .collapse ul ul,
 .mainmenu .collapse ul ul.dropdown-menu {
-    background: #0097A7;
+    background: #006064;
 }
 
 .mainmenu .collapse ul ul ul,
 .mainmenu .collapse ul ul ul.dropdown-menu {
-    background: #26C6DA;
+    background: #0097a7;
 }
 
 .mainmenu .collapse ul ul ul ul,
 .mainmenu .collapse ul ul ul ul.dropdown-menu {
-    background: #98D7E1;
+    background: #26C6DA;
 }
 
 
