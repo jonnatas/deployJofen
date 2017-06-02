@@ -214,11 +214,6 @@ body {
     }
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #5a5a5a;
-}
-
 
 /* Spam*/
 
@@ -272,7 +267,7 @@ body {
 }
 
 .span1 {
-    width: 60px;
+    width: 40px;
 }
 
 .row-fluid [class*="span"] {
