@@ -4,7 +4,6 @@
 
 /* Padding below the footer and lighter body text */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 a:hover,
 a:focus {
     text-decoration: none;
@@ -37,8 +36,7 @@ body {
     margin-top: -10;
     border: 30px;
     background-color: #3C3D41;
-    padding: 20px"
-
+    padding: 20px;
 }
 
 
@@ -145,17 +143,17 @@ body {
 
 .mainmenu .collapse ul ul,
 .mainmenu .collapse ul ul.dropdown-menu {
-    background: #98D7E1;
+    background: #0097A7;
 }
 
 .mainmenu .collapse ul ul ul,
 .mainmenu .collapse ul ul ul.dropdown-menu {
-    background: #3F729B;
+    background: #26C6DA;
 }
 
 .mainmenu .collapse ul ul ul ul,
 .mainmenu .collapse ul ul ul ul.dropdown-menu {
-    background: #e4eeb8
+    background: #98D7E1;
 }
 
 
@@ -607,7 +605,7 @@ table .span24 {
     -webkit-transition: opacity .5s linear;
     -webkit-transition: opacity .5s linear;
     -moz-transition: opacity .5s linear;
-    transition: opacity .5s linear
+    transition: opacity .5s linear;
 }
 
 .row .span4 img:hover {
@@ -706,15 +704,15 @@ footer .span4 {
 /* Custom CSS =========================================== */
 
 a {
-    color: #fff
+    color: #1572B6;
 }
 
 a:hover {
-    color: #eee
+    color: #eee;
 }
 
 .marketing img {
-    max-width: 100%
+    max-width: 100%;
 }
 
 .carousel-caption {
@@ -759,7 +757,7 @@ a:hover {
 
 .introSection {
     background-color: #efefef;
-    padding: 28px 0
+    padding: 28px 0;
 }
 
 .brandBtn {
@@ -770,7 +768,7 @@ a:hover {
     color: #fff;
     background-color: #7db641;
     border-color: #7db641;
-    border-radius: 0
+    border-radius: 0;
 }
 
 .btn-default.active,
@@ -810,11 +808,11 @@ a:hover {
     text-transform: uppercase;
     position: relative;
     margin-bottom: 20px;
-    text-align: center
+    text-align: center;
 }
 
 #myCarousel .container {
-    padding: 0
+    padding: 0;
 }
 
 #mainCarousel .carousel .item {
@@ -829,23 +827,23 @@ footer {
 }
 
 .marketing {
-    padding: 28px 0
+    padding: 28px 0;
 }
 
 .pageTitle {
     padding: 18px 0;
     border-top: 1px solid #efefef;
     margin-top: 92px;
-    background: #efefef
+    background: #efefef;
 }
 
 .pageTitle h2 {
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 .bodyInner {
-    padding: 28px 0
+    padding: 28px 0;
 }
 
 .carousel-caption {
@@ -862,7 +860,7 @@ footer {
 }
 
 .cntr {
-    text-align: center
+    text-align: center;
 }
 
 
