@@ -18,14 +18,15 @@ module.exports = function(application, req, res) {
 
     });
 
-    application.get('/cadastro', function(req, res) {
-        application.app.controllers.produtos.add(application, req, res);
-    });
     application.post('/produto', function(req, res) {
         application.app.controllers.produtos.cadastrar(application, req, res);
     });
 
     /*
+        application.get('/cadastro', function(req, res) {
+        application.app.controllers.produtos.add(application, req, res);
+    });
+    
         //PUT By ID update
         application.put('/produto/:id', function(req, res) {
             application.app.controllers.produtos.updateProduto(application, req, res);
