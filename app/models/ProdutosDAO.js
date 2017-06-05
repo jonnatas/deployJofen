@@ -3,9 +3,9 @@ var mongodb = require('mongodb'),
     MongoClient = require('mongodb').MongoClient;
 
 //var uri = 'mongodb://jonnatasLennon:12092190qp@ds155201.mlab.com:55201/jofen';
-var uri = "mongodb://localhost:27017/jofen";
-var url = 'mongodb://localhost:27017/myproject';
-
+//var uri = "mongodb://localhost:27017/jofen";
+//var url = 'mongodb://localhost:27017/myproject';
+var uri = 'mongodb://jofendb:++nildo1010@mongodb.uhserver.com:27017/jofen';
 //var uri = "mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]"
 
 function ProdutosDAO() {
