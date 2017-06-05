@@ -21,7 +21,9 @@ module.exports = function(application, req, res) {
     application.post('/produto', function(req, res) {
         application.app.controllers.produtos.cadastrar(application, req, res);
     });
-
+    application.get('/produtos', function(req, res) {
+        application.app.controllers.produtos.allProdutos(application, req, res);
+    });
 
     /*
         application.get('/cadastro', function(req, res) {

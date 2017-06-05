@@ -2,13 +2,16 @@ var objectId = require('mongodb').ObjectID;
 var mongodb = require('mongodb'),
     MongoClient = require('mongodb').MongoClient;
 
-var uri = 'mongodb://jonnatasLennon:12092190qp@ds155201.mlab.com:55201/jofen';
+//var uri = 'mongodb://jonnatasLennon:12092190qp@ds155201.mlab.com:55201/jofen';
+var uri = "mongodb://localhost:27017/jofen";
+var url = 'mongodb://localhost:27017/myproject';
 
-//MongoDB server version: 3.2.13
+//var uri = "mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]"
 
 function ProdutosDAO() {
 
 }
+
 
 ProdutosDAO.prototype.inserirProduto = function(req, res, produto) {
     mongodb.MongoClient.connect(uri, function(err, db) {
@@ -73,7 +76,7 @@ ProdutosDAO.prototype.getAllProdutos = function(req, res) {
                 res.json('/');
             } else {
                 console.log(results);
-                res.render('produtos', { produto: results });
+                res.send({ produto: results });
             }
         });
 
