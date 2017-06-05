@@ -152,16 +152,20 @@ module.exports.send_email = function(application, req, res) {
     }
 
     var transporter = nodemailer.createTransport({
-        service: 'Gmail',
+        host: "smtp.jofen.com.br",
+        aliases: ["*"],
+        port: 587,
+        secure: false, // secure:true for port 465, secure:false for port 587
         auth: {
-            user: 'jonatastestelennon@gmail.com',
-            pass: '@12092190'
+            user: 'site@jofen.com.br',
+            pass: 'jofen151'
         }
     });
 
     var mailOptions = {
-        from: 'Jonnatas Lennon <jonatas_lenon@hotmail.com>',
-        to: 'jonatastestelennon@gmail.com, comercial2@jofen.com.br',
+        from: 'site <site@jofen.com.br>',
+        //to: 'jonatastestelennon@gmail.com, comercial2@jofen.com.br',
+        to: 'jonatastestelennon@gmail.com, site@jofen.com.br',
         subject: 'Contato site jofen: ' + PP.nome,
         html: '<H1> Email: ' + req.body.email + '</H1>Nome: ' + '<h2>' + req.body.nome + ' </H2> <h3> Telefone: ' + req.body.telefone + '</h3><p>Mensagem: ' + req.body.mensagem + '</p>'
     };

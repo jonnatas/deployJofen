@@ -47,32 +47,35 @@ module.exports.mail = function(application, req, res) {
         return;
     }
 
-    var transporter = nodemailer.createTransport({
-        service: 'Gmail',
+    let transporter = nodemailer.createTransport({
+        host: "smtp.jofen.com.br",
+        port: 587,
+        secure: false, // secure:true for port 465, secure:false for port 587
         auth: {
-            user: 'jonatastestelennon@gmail.com',
-            pass: '12092190qp'
+            user: 'site@jofen.com.br',
+            pass: 'jofen151'
         }
     });
 
     var mailOptions = {
-        from: 'jonatas lenon <jonatastestelennon@gmail.com>',
+        from: 'site' + ' <site@jofen.com.br>',
         //to: 'jonatastestelennon@gmail.com, comercial2@jofen.com.br',
-        to: 'jonatastestelennon@gmail.com, jonatas_lenon@htmail.com',
+        to: 'site@jofen.com.br, jonatastestelennon@gmail.com, jonatas_lenon@hotmail.com',
         subject: 'Contato site jofen: ' + req.body.assunto,
-        html: '<H1> Email: ' + req.body.email + '</H1>Nome: ' + '<h2>' + req.body.nome + ' </H2> <h3> Telefone: ' + req.body.telefone + '</h3><p>Mensagem: ' + req.body.mensagem + '</p>'
+        html: '<H1>Email: ' + req.body.email + '</H1>Nome: ' + '<h2>' + req.body.nome + ' </H2> <h3> Telefone: ' + req.body.telefone + '</h3><p>Mensagem: ' + req.body.mensagem + '</p>'
     };
 
-    var sendMail = transporter.sendMail(mailOptions, function(error,
-        info) {
+    transporter.sendMail(mailOptions, function(error, info) {
+        console.log(mailOptions);
         if (error) {
-            console.log(error)
+            console.log(error);
             res.render('contato', {
                 validation: {},
                 dadosForm: {},
                 sucesso: { mail: "Não foi registrar os seus dados, verifique seu email." }
             });
         } else {
+            console.log("Email enviado: " + info);
             res.render('contato', {
                 validation: {},
                 dadosForm: {},
