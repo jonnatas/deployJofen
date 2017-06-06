@@ -47,13 +47,23 @@ module.exports.mail = function(application, req, res) {
         return;
     }
 
-    let transporter = nodemailer.createTransport({
-        host: "smtp.jofen.com.br",
-        port: 587,
-        secure: false, // secure:true for port 465, secure:false for port 587
+    /*
+        let transporter = nodemailer.createTransport({
+            host: "smtp.jofen.com.br",
+            port: 587,
+            secure: false, // secure:true for port 465, secure:false for port 587
+            auth: {
+                user: 'site@jofen.com.br',
+                pass: 'jofen151'
+            }
+        });
+    */
+
+    var transporter = nodemailer.createTransport({
+        service: "Hotmail",
         auth: {
-            user: 'site@jofen.com.br',
-            pass: 'jofen151'
+            user: 'jonatas_lenon@hotmail.com',
+            pass: '@chevrolcamar1'
         }
     });
 
