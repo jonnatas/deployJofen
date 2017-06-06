@@ -62,8 +62,8 @@ module.exports.mail = function(application, req, res) {
     var transporter = nodemailer.createTransport({
         service: "Hotmail",
         auth: {
-            user: 'jonatas_lenon@hotmail.com',
-            pass: '@chevrolcamar1'
+            user: 'jofenfinanceiro@outlook.com',
+            pass: 'jofen1481'
         }
     });
 
