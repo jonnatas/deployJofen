@@ -92,7 +92,7 @@ module.exports.mail = function(application, req, res) {
             res.render('contato', {
                 validation: {},
                 dadosForm: {},
-                sucesso: { mail: "Email enviado!" }
+                sucesso: { mail: "Obrigado por entrar em contato conosco!\nEstaremos respondendo sua solicitação em breve!" }
             });
         }
     });

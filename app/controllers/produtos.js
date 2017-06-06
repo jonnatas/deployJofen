@@ -184,7 +184,7 @@ module.exports.send_email = function(application, req, res) {
                 produto: PP,
                 validation: {},
                 dadosForm: {},
-                sucesso: { mail: "Email enviado!" }
+                sucesso: { mail: "Obrigado por entrar em contato conosco!\nEstaremos respondendo sua solicitação em breve!" }
             });
         }
     });
