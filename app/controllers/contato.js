@@ -46,27 +46,21 @@ module.exports.mail = function(application, req, res) {
         });
         return;
     }
-    /*
+
+    //        var transporter = nodemailer.createTransport('smtp://jofenfinanceiro%40outlook.com:jofen1481@smtp-mail.outlook.com');
+
     var transporter = nodemailer.createTransport({
-        service: "Hotmail",
-        auth: {
-            user: 'jofenfinanceiro@outlook.com',
-            pass: 'jofen1481'
-        }
-    });
-    */
-    var transporter = nodemailer.createTransport({
-        host: "smtp.jofen.com.br",
+        host: "in-v3.mailjet.com",
         port: 587,
         secure: false, // secure:true for port 465, secure:false for port 587
         auth: {
-            user: 'site@jofen.com.br',
-            pass: 'jofen151'
+            user: '72ecbef5f29924785fcf6e83a465ef70',
+            pass: 'bbdcfa904cd86d2a473008c396cd016e'
         }
     });
 
     var mailOptions = {
-        from: 'site' + ' <site@jofen.com.br>',
+        from: req.body.nome + ' <site@jofen.com.br>',
         to: 'site@jofen.com.br',
         //        to: 'site@jofen.com.br, comercial2@jofen.com.br',
         subject: 'Contato site jofen: ' + req.body.assunto,
@@ -80,7 +74,7 @@ module.exports.mail = function(application, req, res) {
             res.render('contato', {
                 validation: {},
                 dadosForm: {},
-                sucesso: { mail: "Não foi registrar os seus dados, verifique seu email." }
+                sucesso: { mail: "Não foi registrar os seus dados, verifique seu email. " + error }
             });
         } else {
             console.log("Email enviado: " + info);
