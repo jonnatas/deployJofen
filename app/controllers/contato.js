@@ -46,6 +46,7 @@ module.exports.mail = function(application, req, res) {
         });
         return;
     }
+    /*
     var transporter = nodemailer.createTransport({
         service: "Hotmail",
         auth: {
@@ -53,22 +54,21 @@ module.exports.mail = function(application, req, res) {
             pass: 'jofen1481'
         }
     });
-    /*
-        let transporter = nodemailer.createTransport({
-            host: "smtp.jofen.com.br",
-            port: 587,
-            secure: false, // secure:true for port 465, secure:false for port 587
-            auth: {
-                user: 'site@jofen.com.br',
-                pass: 'jofen151'
-            }
-        });
     */
-
+    var transporter = nodemailer.createTransport({
+        host: "smtp.jofen.com.br",
+        port: 587,
+        secure: false, // secure:true for port 465, secure:false for port 587
+        auth: {
+            user: 'site@jofen.com.br',
+            pass: 'jofen151'
+        }
+    });
 
     var mailOptions = {
         from: 'site' + ' <site@jofen.com.br>',
-        to: 'site@jofen.com.br, comercial2@jofen.com.br',
+        to: 'site@jofen.com.br',
+        //        to: 'site@jofen.com.br, comercial2@jofen.com.br',
         subject: 'Contato site jofen: ' + req.body.assunto,
         html: '<H1>Email: ' + req.body.email + '</H1>Nome: ' + '<h2>' + req.body.nome + ' </H2> <h3> Telefone: ' + req.body.telefone + '</h3><p>Mensagem: ' + req.body.mensagem + '</p>'
     };
