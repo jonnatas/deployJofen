@@ -48,11 +48,20 @@ module.exports.mail = function(application, req, res) {
     }
 
     //        var transporter = nodemailer.createTransport('smtp://jofenfinanceiro%40outlook.com:jofen1481@smtp-mail.outlook.com');
-
+    /*
+        var transporter = nodemailer.createTransport({
+            host: "in-v3.mailjet.com",
+            port: 587,
+            secure: false, // secure:true for port 465, secure:false for port 587
+            auth: {
+                user: '72ecbef5f29924785fcf6e83a465ef70',
+                pass: 'bbdcfa904cd86d2a473008c396cd016e'
+            }
+        });
+    */
     var transporter = nodemailer.createTransport({
         host: "in-v3.mailjet.com",
         port: 587,
-        secure: false, // secure:true for port 465, secure:false for port 587
         auth: {
             user: '72ecbef5f29924785fcf6e83a465ef70',
             pass: 'bbdcfa904cd86d2a473008c396cd016e'
