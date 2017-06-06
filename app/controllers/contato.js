@@ -46,7 +46,13 @@ module.exports.mail = function(application, req, res) {
         });
         return;
     }
-
+    var transporter = nodemailer.createTransport({
+        service: "Hotmail",
+        auth: {
+            user: 'jofenfinanceiro@outlook.com',
+            pass: 'jofen1481'
+        }
+    });
     /*
         let transporter = nodemailer.createTransport({
             host: "smtp.jofen.com.br",
@@ -59,13 +65,6 @@ module.exports.mail = function(application, req, res) {
         });
     */
 
-    var transporter = nodemailer.createTransport({
-        service: "Hotmail",
-        auth: {
-            user: 'jofenfinanceiro@outlook.com',
-            pass: 'jofen1481'
-        }
-    });
 
     var mailOptions = {
         from: 'site' + ' <site@jofen.com.br>',
