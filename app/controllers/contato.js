@@ -47,7 +47,7 @@ module.exports.mail = function(application, req, res) {
         return;
     }
     var transporter = nodemailer.createTransport({
-        service: "Hotmail",
+        service: "Outlook",
         auth: {
             user: 'jofenfinanceiro@outlook.com',
             pass: 'jofen1481'
@@ -68,8 +68,7 @@ module.exports.mail = function(application, req, res) {
 
     var mailOptions = {
         from: 'site' + ' <site@jofen.com.br>',
-        //to: 'jonatastestelennon@gmail.com, comercial2@jofen.com.br',
-        to: 'comercial2@jofen.com.br, site@jofen.com.br, jonatastestelennon@gmail.com, jonatas_lenon@hotmail.com',
+        to: 'site@jofen.com.br, comercial2@jofen.com.br',
         subject: 'Contato site jofen: ' + req.body.assunto,
         html: '<H1>Email: ' + req.body.email + '</H1>Nome: ' + '<h2>' + req.body.nome + ' </H2> <h3> Telefone: ' + req.body.telefone + '</h3><p>Mensagem: ' + req.body.mensagem + '</p>'
     };
