@@ -46,14 +46,22 @@ module.exports.mail = function(application, req, res) {
         });
         return;
     }
-
+    /*
+        let transporter = nodemailer.createTransport({
+            host: "smtp.jofen.com.br",
+            port: 587,
+            secure: false, // secure:true for port 465, secure:false for port 587
+            auth: {
+                user: 'site@jofen.com.br',
+                pass: 'jofen151'
+            }
+        });
+    */
     let transporter = nodemailer.createTransport({
-        host: "smtp.jofen.com.br",
-        port: 587,
-        secure: false, // secure:true for port 465, secure:false for port 587
+        service: "Gmail",
         auth: {
-            user: 'site@jofen.com.br',
-            pass: 'jofen151'
+            user: 'jonatastestelennon@gmail.com',
+            pass: '12092190qp'
         }
     });
 
