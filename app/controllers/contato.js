@@ -59,21 +59,20 @@ module.exports.mail = function(application, req, res) {
             }
         });
     */
+
     var transporter = nodemailer.createTransport({
-        host: "in-v3.mailjet.com",
-        port: 587,
-        auth: {
-            user: '72ecbef5f29924785fcf6e83a465ef70',
-            pass: 'bbdcfa904cd86d2a473008c396cd016e'
-        },
+        host: "smtp.jofen.com.br", // hostname
+        secureConnection: false, // TLS requires secureConnection to be false
+        port: 587, // port for secure SMTP
         tls: {
-            ciphers: "SSLv3"
-        }
+            ciphers: 'SSLv3'
+        },
+        auth: { user: 'site@jofen.com.br', pass: 'jofen151' },
     });
 
     var mailOptions = {
         from: req.body.nome + ' <site@jofen.com.br>',
-        to: 'comercial2@jofen.com.br',
+        to: 'site@jofen.com.br',
         subject: 'Contato site jofen: ' + req.body.assunto,
         html: '<H1>Email: ' + req.body.email + '</H1>Nome: ' + '<h2>' + req.body.nome + ' </H2> <h3> Telefone: ' + req.body.telefone + '</h3><p>Mensagem: ' + req.body.mensagem + '</p>'
     };
