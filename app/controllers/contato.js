@@ -52,18 +52,30 @@ module.exports.mail = function(application, req, res) {
         var transporter = nodemailer.createTransport({
             host: "in-v3.mailjet.com",
             port: 587,
-            secure: false, // secure:true for port 465, secure:false for port 587
             auth: {
                 user: '72ecbef5f29924785fcf6e83a465ef70',
                 pass: 'bbdcfa904cd86d2a473008c396cd016e'
+            },
+            tls: {
+                ciphers: "SSLv3"
             }
         });
-    */
+        
+        var transporter = nodemailer.createTransport({
+            host: "smtp.jofen.com.br", // hostname
+            secureConnection: false, // TLS requires secureConnection to be false
+            port: 587, // port for secure SMTP
+            auth: { user: 'site@jofen.com.br', pass: 'jofen151' },
+        });
+        */
 
     var transporter = nodemailer.createTransport({
         host: "smtp.jofen.com.br", // hostname
         secureConnection: false, // TLS requires secureConnection to be false
-        port: 587, // port for secure SMTP
+        port: 587,
+        tls: {
+            ciphers: "SSLv3"
+        },
         auth: { user: 'site@jofen.com.br', pass: 'jofen151' },
     });
 
