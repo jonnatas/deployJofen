@@ -64,9 +64,6 @@ module.exports.mail = function(application, req, res) {
         host: "smtp.jofen.com.br", // hostname
         secureConnection: false, // TLS requires secureConnection to be false
         port: 587, // port for secure SMTP
-        tls: {
-            ciphers: 'SSLv3'
-        },
         auth: { user: 'site@jofen.com.br', pass: 'jofen151' },
     });
 
