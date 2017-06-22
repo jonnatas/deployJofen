@@ -8,7 +8,6 @@ function ProdutosDAO() {
 
 }
 
-
 ProdutosDAO.prototype.inserirProduto = function(req, res, produto) {
     mongodb.MongoClient.connect(uri, function(err, db) {
         var produtos = db.collection('produtos');
