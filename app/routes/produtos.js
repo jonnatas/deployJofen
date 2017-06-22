@@ -26,16 +26,15 @@ module.exports = function(application, req, res) {
         application.app.controllers.produtos.allProdutos(application, req, res);
     });
 
-    application.get('/cadastro', function(req, res) {
-        application.app.controllers.produtos.add(application, req, res);
-    });
-
-    application.get('/produtos', function(req, res) {
-        application.app.controllers.produtos.allProdutos(application, req, res);
-    });
     /*
+        application.get('/cadastro', function(req, res) {
+            application.app.controllers.produtos.add(application, req, res);
+        });
+
+        application.get('/produtos', function(req, res) {
+            application.app.controllers.produtos.allProdutos(application, req, res);
+        });        
         
-    
         //PUT By ID update
         application.put('/produto/:id', function(req, res) {
             application.app.controllers.produtos.updateProduto(application, req, res);
