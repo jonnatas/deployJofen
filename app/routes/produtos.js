@@ -22,8 +22,6 @@ module.exports = function(application, req, res) {
         application.app.controllers.produtos.cadastrar(application, req, res);
     });
 
-
-
     /*
         application.get('/cadastro', function(req, res) {
             application.app.controllers.produtos.add(application, req, res);
