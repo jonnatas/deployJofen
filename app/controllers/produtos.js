@@ -152,11 +152,12 @@ module.exports.send_email = function(application, req, res) {
     }
 
     var transporter = nodemailer.createTransport({
-        host: "in-v3.mailjet.com",
-        port: 587,
+        host: "smtp.jofen.com.br", // hostname
+        secureConnection: false, // TLS requires secureConnection to be false
+        port: 587, // port for secure SMTP
         auth: {
-            user: '72ecbef5f29924785fcf6e83a465ef70',
-            pass: 'bbdcfa904cd86d2a473008c396cd016e'
+            user: 'site@jofen.com.br',
+            pass: 'jofen151'
         },
         tls: {
             ciphers: "SSLv3"

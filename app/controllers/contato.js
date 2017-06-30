@@ -47,47 +47,6 @@ module.exports.mail = function(application, req, res) {
         return;
     }
 
-    //var transporter = nodemailer.createTransport('smtp://jofenfinanceiro%40outlook.com:jofen1481@smtp-mail.outlook.com');
-
-    var transporter = nodemailer.createTransport({
-        host: "smtp.live.com",
-        port: 587,
-        auth: {
-            user: 'jofenfinanceiro@outlook.com',
-            pass: 'jofen1481'
-        },
-        secureConnection: false,
-        tls: {
-            ciphers: "SSLv3"
-        }
-    });
-
-    /*var transporter = nodemailer.createTransport({
-        host: "in-v3.mailjet.com",
-        port: 587,
-        auth: {
-            user: '72ecbef5f29924785fcf6e83a465ef70',
-            pass: 'bbdcfa904cd86d2a473008c396cd016e'
-        },
-        tls: {
-            ciphers: "SSLv3"
-        }
-    });
-        
-        
-        
-
-    var transporter = nodemailer.createTransport({
-        host: "smtp.jofen.com.br", // hostname
-        secureConnection: false, // TLS requires secureConnection to be false
-        port: 587,
-        tls: {
-            ciphers: "SSLv3"
-        },
-        auth: { user: 'site@jofen.com.br', pass: 'jofen151' },
-    });
-*/
-
     var transporter = nodemailer.createTransport({
         host: "smtp.jofen.com.br", // hostname
         secureConnection: false, // TLS requires secureConnection to be false
@@ -95,12 +54,15 @@ module.exports.mail = function(application, req, res) {
         auth: {
             user: 'site@jofen.com.br',
             pass: 'jofen151'
+        },
+        tls: {
+            ciphers: "SSLv3"
         }
     });
 
     var mailOptions = {
         from: req.body.nome + ' <site@jofen.com.br>',
-        to: 'site@jofen.com.br',
+        to: 'comercial2@jofen.com.br',
         subject: 'Contato site jofen: ' + req.body.assunto,
         html: '<H1>Email: ' + req.body.email + '</H1>Nome: ' + '<h2>' + req.body.nome + ' </H2> <h3> Telefone: ' + req.body.telefone + '</h3><p>Mensagem: ' + req.body.mensagem + '</p>'
     };
