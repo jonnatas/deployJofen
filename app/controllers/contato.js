@@ -60,6 +60,7 @@ module.exports.mail = function(application, req, res) {
         }
     });
 
+
     var mailOptions = {
         from: req.body.nome + ' <site@jofen.com.br>',
         to: 'comercial2@jofen.com.br',
