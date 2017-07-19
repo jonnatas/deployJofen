@@ -1,7 +1,24 @@
 <div class="container">
-    <h2>Fale Conosco</h2>
-    <h3>Gostaria de falar conosco, clique aqui: <a href="mailto:comercial2@jofen.com.br" itemprop="email">comercial2@jofen.com.br</a>
-    , ou preencha o formulário:</h3>
+    <h2>Gostaria de falar conosco</h2>
+    <h4><a href="intent://send/11983147367#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">
+            <img src="/img/whatsapp-logo.png" alt="Responsive image">
+        </a>
+        Pelo Whatsapp 
+        <a href="intent://send/11983147367#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">
+            +55 (11)98314-7367
+        </a>
+    </h4>
+    <h4>
+        <a href="mailto:comercial2@jofen.com.br?subject=Orçamento: <%= PP.nome %> Site">
+            <img src="/img/email-logo.png" alt="Responsive image">
+        </a>
+        Envie um e-mail clicando aqui:  
+        <a href="mailto:comercial2@jofen.com.br?subject=Orçamento: <%= PP.nome %> Site">
+            comercial2@jofen.com.br
+        </a>
+    </h4>
+    <h4> Ou preencha o formulário:</h4>
+
     <form class="well col-sm-10 col-md-11" action="/getmail" method="post">
         <div class="row">
             <div class="col-sm-4 col-md-4">
