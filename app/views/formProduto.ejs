@@ -1,7 +1,24 @@
 <div class="container">
-    <h3>Para Solicitar Orçamento clique aqui: 
-    <a href="mailto:comercial2@jofen.com.br?subject=Orçamento: <%= PP.nome %> Site">comercial2@jofen.com.br</a>
-    , ou preencha o formulário:</h3>
+    <h3>Para Solicitar Orçamento:</h3>
+    <h4><a href="intent://send/5561983147367#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">
+            <img src="/img/whatsapp-logo.png" alt="Responsive image">
+        </a>
+        Pelo Whatsapp 
+        <a href="intent://send/5561983147367#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">
+            +55 (11)98314-7367
+        </a>
+    </h4>
+    <h4>
+        <a href="mailto:comercial2@jofen.com.br?subject=Orçamento: <%= PP.nome %> Site">
+            <img src="/img/email-logo.png" alt="Responsive image">
+        </a>
+        Envie um e-mail clicando aqui:  
+        <a href="mailto:comercial2@jofen.com.br?subject=Orçamento: <%= PP.nome %> Site">
+            comercial2@jofen.com.br
+        </a>
+    </h4>
+    <h4> preencha o formulário:</h4>
+
     <form class="well col-sm-10 col-md-11" action="/produto_email" method="post">
         <div class="row">
             <div class="col-sm-4 col-md-4">
